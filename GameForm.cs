@@ -92,10 +92,6 @@ namespace NoGravEx_Entwurf2
             this.Height = 800;
             this.Width = 1000;
 
-            // Updating the full-screen 
-            this.Resize += new EventHandler(Form_Resize);
-            UpdateLayout(); // Initiale Layout-Einstellung
-
             /**
              *     Functions related to the game state
              */
@@ -112,13 +108,6 @@ namespace NoGravEx_Entwurf2
 
             // For implementing the curr_goal, that needs to be achieved
             this.create_game_queue(goal_arr_length);
-
-            /** For testing purposes
-            for (int i = 0; i < goal_arr_length; i++)
-            {
-                Console.WriteLine(goal_arr[i]);
-            }
-            */
 
             // Set the position of the cursor once in the beginning
             this.Set_cursor_pos();
@@ -175,10 +164,20 @@ namespace NoGravEx_Entwurf2
             // The standard sensor is 0
             this.change_sensor(this.current_sensor);
             this.curr_sens_label.Location = new Point(10, this.Height - 100);
+
+
+            // ***** Updating the full-screen ****** 
+            this.Resize += new EventHandler(Form_Resize);
+            UpdateLayout(); // Initiale Layout-Einstellung
         }
 
         private void Form_Resize(object sender, EventArgs e)
         {
+            //Change the bar positions
+            this.upper_point_x = this.Width / 2;
+            this.upper_point_y = this.Height / 4;
+
+            //Change all elements
             UpdateLayout();
         }
 
@@ -187,14 +186,33 @@ namespace NoGravEx_Entwurf2
             int formWidth = this.ClientSize.Width;
             int formHeight = this.ClientSize.Height;
 
-            // Beispiel für das Zentrieren eines Panels (panel1)
-            panel1.Location = new Point((formWidth - panel1.Width) / 2, (formHeight - panel1.Height) / 2);
+            // Define the elements to be centered as a group
+            Control[] controlsToCenter = new Control[]
+            {
+        panel1, label1, cdown_label, pictureBox1, meas_button, meas_label,
+        meas_progress_bar, start_button, label3, curr_sens_label,
+        choice_btn1, choice_btn2, choice_btn3, choice_btn4
+            };
 
-            // Beispiel für das Zentrieren eines Labels (label1)
-            label1.Location = new Point((formWidth - label1.Width) / 2, (formHeight - label1.Height) / 2);
+            // Calculate the total width and height of the group
+            int totalWidth = controlsToCenter.Max(c => c.Right) - controlsToCenter.Min(c => c.Left);
+            int totalHeight = controlsToCenter.Max(c => c.Bottom) - controlsToCenter.Min(c => c.Top);
 
-            // Hier können weitere Objekte hinzugefügt werden, um sie zu zentrieren
+            // Calculate the top-left position for the group
+            int startX = (formWidth - totalWidth) / 2;
+            int startY = (formHeight - totalHeight) / 2;
+
+            // Calculate offsets for each element and set their new positions
+            int offsetX = startX - controlsToCenter.Min(c => c.Left);
+            int offsetY = startY - controlsToCenter.Min(c => c.Top);
+
+            foreach (var control in controlsToCenter)
+            {
+                control.Location = new Point(control.Left + offsetX, control.Top + offsetY);
+            }
         }
+
+
 
         /// <summary>
         /// Change the selected sensor by simply pressing a number key. There are 10 sensor in total.

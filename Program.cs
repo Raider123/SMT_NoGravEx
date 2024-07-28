@@ -1,6 +1,7 @@
 using NoGravEx_Entwurf2;
 using System;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Waveplus.DaqExample

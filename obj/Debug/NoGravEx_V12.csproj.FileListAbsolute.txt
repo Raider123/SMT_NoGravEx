@@ -108,3 +108,17 @@ C:\Users\dokha\Documents\SMT_NoGravEx\obj\Debug\NoGravEx_V12.csproj.CoreCompileI
 C:\Users\dokha\Documents\SMT_NoGravEx\obj\Debug\NoGravEx_V12.csproj.CopyComplete
 C:\Users\dokha\Documents\SMT_NoGravEx\obj\Debug\Waveplus_Daq_Example.exe
 C:\Users\dokha\Documents\SMT_NoGravEx\obj\Debug\Waveplus_Daq_Example.pdb
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\bin\Debug\Waveplus_Daq_Example.exe.config
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\bin\Debug\Waveplus_Daq_Example.exe
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\bin\Debug\Waveplus_Daq_Example.pdb
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\bin\Debug\CyUSB.dll
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\NoGravEx_V12.csproj.AssemblyReference.cache
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\NoGravEx_Entwurf2.NoGravEx_V2.resources
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\Waveplus.DaqExample.WaveplusDaqExampleForm.resources
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\Waveplus_Daq_Example.Properties.Resources.resources
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\Waveplus.DaqExample.CaptureAndSensorConfigForm.resources
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\NoGravEx_V12.csproj.GenerateResource.cache
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\NoGravEx_V12.csproj.CoreCompileInputs.cache
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\NoGravEx.944E3642.Up2Date
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\Waveplus_Daq_Example.exe
+C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\Waveplus_Daq_Example.pdb

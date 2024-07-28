@@ -1,5 +1,6 @@
 ﻿using NoGravEx_Entwurf2;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -371,14 +372,13 @@ namespace Waveplus.DaqExample
         }
 
         // Method by Raid Dokhan
-        public double current_emg_sample;
+        public double current_emg_sample; 
         public int current_sensor;
         public void store_emg_samples(DataAvailableEventArgs e)
         {
             // The samples are expressed in [uV] unit
             // Expected value for the mvc of a person - around 1200uV
-            this.current_emg_sample = 0.0004;
-            //this.current_emg_sample = e.Samples[current_sensor - 1, e.ScanNumber - 1];
+            this.current_emg_sample = e.Samples[current_sensor - 1, e.ScanNumber - 1];
             test_csv.AppendLine((e.Samples[current_sensor - 1, e.ScanNumber - 1]).ToString());
         }
 
