@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\",
+  "WorkspaceRootPath": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|c:\\users\\dokha\\documents\\smt_nogravex\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|solutionrelative:gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|c:\\users\\dokha\\documents\\smt_nogravex\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|solutionrelative:gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\waveplusdaqexampleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|c:\\users\\dokha\\documents\\github\\testclone\\smt_nogravex\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|solutionrelative:gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\waveplusdaqexampleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|solutionrelative:waveplusdaqexampleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6143D038-73CF-45EF-995D-2BB42621BDF0}|NoGravEx_V12.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,33 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\Program.cs",
+              "ToolTip": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAQwDMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T13:08:40.955Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameForm.cs [Entwurf]",
-              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\GameForm.cs",
-              "RelativeDocumentMoniker": "GameForm.cs",
-              "ToolTip": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\GameForm.cs [Entwurf]",
-              "RelativeToolTip": "GameForm.cs [Entwurf]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T17:30:54.156Z",
-              "EditorCaption": " [Entwurf]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -60,26 +47,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WaveplusDaqExampleForm.cs",
-              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\WaveplusDaqExampleForm.cs",
-              "RelativeDocumentMoniker": "WaveplusDaqExampleForm.cs",
-              "ToolTip": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\WaveplusDaqExampleForm.cs",
-              "RelativeToolTip": "WaveplusDaqExampleForm.cs",
-              "ViewState": "AQIAAGEBAAAAAAAAAAAAAHYBAAAtAAAA",
+              "DocumentIndex": 0,
+              "Title": "GameForm.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\GameForm.cs",
+              "RelativeDocumentMoniker": "GameForm.cs",
+              "ToolTip": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\GameForm.cs [Entwurf]",
+              "RelativeToolTip": "GameForm.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T13:09:38.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-03T17:30:54.156Z",
+              "EditorCaption": " [Entwurf]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "WaveplusDaqExampleForm.cs",
+              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\WaveplusDaqExampleForm.cs",
+              "RelativeDocumentMoniker": "WaveplusDaqExampleForm.cs",
+              "ToolTip": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\WaveplusDaqExampleForm.cs",
+              "RelativeToolTip": "WaveplusDaqExampleForm.cs",
+              "ViewState": "AQIAAGEBAAAAAAAAAAAAAHYBAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T13:09:38.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GameForm.cs",
-              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\GameForm.cs",
+              "DocumentMoniker": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\GameForm.cs",
               "RelativeDocumentMoniker": "GameForm.cs",
-              "ToolTip": "C:\\Users\\dokha\\Documents\\SMT_NoGravEx\\GameForm.cs",
+              "ToolTip": "C:\\Users\\dokha\\Documents\\GitHub\\TestClone\\SMT_NoGravEx\\GameForm.cs",
               "RelativeToolTip": "GameForm.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAwHUAAAArAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAwFoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T13:08:48.373Z",
               "EditorCaption": ""

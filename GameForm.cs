@@ -10,6 +10,7 @@ using System.Windows.Forms.VisualStyles;
 using Waveplus.DaqExample;
 using Waveplus_Daq_Example;
 using Microsoft.VisualBasic;
+using System.Diagnostics;
 
 namespace NoGravEx_Entwurf2
 {
@@ -26,7 +27,7 @@ namespace NoGravEx_Entwurf2
         public string filePath;
 
         // Choose the standard sensor upon startup
-        private int current_sensor = 3;
+        private int current_sensor = 1;
 
         // Relative variables for the pillar etc.
         private int side_length, upper_point_x, upper_point_y;
@@ -84,7 +85,7 @@ namespace NoGravEx_Entwurf2
         // Implements the sound player for the three states (excluding zero)
         public Sound_choice musicplayer;
 
-        public bool sound_enabled = true;
+        public bool sound_enabled = false;
 
         private bool no_feedback_state = false;
 
@@ -114,11 +115,12 @@ namespace NoGravEx_Entwurf2
             // For implementing the curr_goal, that needs to be achieved
             this.create_game_queue(goal_arr_length);
 
-
-            foreach (int number in goal_arr)
-            {
-                Console.WriteLine(number);
-            }
+            //////
+           // for(int i = 0; i < goal_arr.Length; i++)
+           // {
+          //      Debug.WriteLine($"goal_arr[{i}] = {goal_arr[i]}");
+            //}
+            ///////
 
             // Set the position of the cursor once in the beginning
             this.Set_cursor_pos();
@@ -1189,6 +1191,13 @@ namespace NoGravEx_Entwurf2
 
         private void NoGravEx_V2_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Finish the .txt document by appending all the emg-samples
+            File.WriteAllText(filePath, emg_txt.ToString());
+
+            // Stop existing timers
+            game_timer.Stop();
+            cdown_timer.Stop();
+
             // Stop the EMG-Data aquisition when the form is closed
             wdaq.StopCaptureButton_Click(sender, e);
         }
@@ -1260,6 +1269,7 @@ namespace NoGravEx_Entwurf2
         {
             goal_arr_length = 9;
             infinite_mode = false;
+            infinity_image.Visible = false;
 
             // Creating a new game queue for a new session (new queue, num_of_success, new goal)
             this.create_game_queue(goal_arr_length);
@@ -1296,6 +1306,9 @@ namespace NoGravEx_Entwurf2
             goal_arr_length = 90000;
             infinite_mode = true;
             label3.Visible = false;
+
+            infinity_image.Location = new Point(label3.Location.X, label3.Location.Y);
+            infinity_image.Visible = true;
 
             // Creating a new game queue for a new session (new queue, num_of_success, new goal)
             this.create_game_queue(goal_arr_length);

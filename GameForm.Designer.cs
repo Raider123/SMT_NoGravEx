@@ -66,9 +66,11 @@
             this.choice_btn2 = new System.Windows.Forms.Button();
             this.choice_btn3 = new System.Windows.Forms.Button();
             this.choice_btn4 = new System.Windows.Forms.Button();
+            this.infinity_image = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infinity_image)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,7 +163,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1181, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1181, 30);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -233,14 +235,14 @@
             // limited9GoalsToolStripMenuItem
             // 
             this.limited9GoalsToolStripMenuItem.Name = "limited9GoalsToolStripMenuItem";
-            this.limited9GoalsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.limited9GoalsToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.limited9GoalsToolStripMenuItem.Text = "Limited (9 goals)";
             this.limited9GoalsToolStripMenuItem.Click += new System.EventHandler(this.limited_loop);
             // 
             // infiniteLoopToolStripMenuItem
             // 
             this.infiniteLoopToolStripMenuItem.Name = "infiniteLoopToolStripMenuItem";
-            this.infiniteLoopToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.infiniteLoopToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.infiniteLoopToolStripMenuItem.Text = "Infinite Loop";
             this.infiniteLoopToolStripMenuItem.Click += new System.EventHandler(this.infinite_loop);
             // 
@@ -366,12 +368,12 @@
             this.choice_btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.choice_btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choice_btn1.ForeColor = System.Drawing.Color.White;
-            this.choice_btn1.Location = new System.Drawing.Point(280, 400);
+            this.choice_btn1.Location = new System.Drawing.Point(140, 400);
             this.choice_btn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.choice_btn1.Name = "choice_btn1";
-            this.choice_btn1.Size = new System.Drawing.Size(200, 165);
+            this.choice_btn1.Size = new System.Drawing.Size(300, 200);
             this.choice_btn1.TabIndex = 16;
-            this.choice_btn1.Text = "Visual \r\n+ \r\nAudio\r\n\r\n\r\n\r\n\r\n";
+            this.choice_btn1.Text = "Normales\r\nSpiel\r\n(Vis. + Aud.)\r\n\r\n\r\n\r\n";
             this.choice_btn1.UseVisualStyleBackColor = false;
             this.choice_btn1.Visible = false;
             this.choice_btn1.Click += new System.EventHandler(this.choice_btn1_Click);
@@ -382,12 +384,12 @@
             this.choice_btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.choice_btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choice_btn2.ForeColor = System.Drawing.Color.White;
-            this.choice_btn2.Location = new System.Drawing.Point(511, 400);
+            this.choice_btn2.Location = new System.Drawing.Point(450, 400);
             this.choice_btn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.choice_btn2.Name = "choice_btn2";
-            this.choice_btn2.Size = new System.Drawing.Size(200, 165);
+            this.choice_btn2.Size = new System.Drawing.Size(300, 200);
             this.choice_btn2.TabIndex = 17;
-            this.choice_btn2.Text = "Visual Only";
+            this.choice_btn2.Text = "Nur \r\nvisuelles \r\nFeedback";
             this.choice_btn2.UseVisualStyleBackColor = false;
             this.choice_btn2.Visible = false;
             this.choice_btn2.Click += new System.EventHandler(this.choice_btn2_Click);
@@ -398,12 +400,12 @@
             this.choice_btn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.choice_btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choice_btn3.ForeColor = System.Drawing.Color.White;
-            this.choice_btn3.Location = new System.Drawing.Point(971, 400);
+            this.choice_btn3.Location = new System.Drawing.Point(1070, 400);
             this.choice_btn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.choice_btn3.Name = "choice_btn3";
-            this.choice_btn3.Size = new System.Drawing.Size(200, 165);
+            this.choice_btn3.Size = new System.Drawing.Size(300, 200);
             this.choice_btn3.TabIndex = 18;
-            this.choice_btn3.Text = "Audio Only";
+            this.choice_btn3.Text = "Nur\r\nauditives \r\nFeedback";
             this.choice_btn3.UseVisualStyleBackColor = false;
             this.choice_btn3.Visible = false;
             this.choice_btn3.Click += new System.EventHandler(this.choice_btn3_Click);
@@ -414,15 +416,28 @@
             this.choice_btn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.choice_btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choice_btn4.ForeColor = System.Drawing.Color.White;
-            this.choice_btn4.Location = new System.Drawing.Point(739, 400);
+            this.choice_btn4.Location = new System.Drawing.Point(760, 400);
             this.choice_btn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.choice_btn4.Name = "choice_btn4";
-            this.choice_btn4.Size = new System.Drawing.Size(200, 165);
+            this.choice_btn4.Size = new System.Drawing.Size(300, 200);
             this.choice_btn4.TabIndex = 19;
-            this.choice_btn4.Text = "Normal\r\n+ \r\nMoving Bar\r\n\r\n";
+            this.choice_btn4.Text = "Feedback mit Balken\r\nin korrekten Zonen";
             this.choice_btn4.UseVisualStyleBackColor = false;
             this.choice_btn4.Visible = false;
             this.choice_btn4.Click += new System.EventHandler(this.choice_btn4_Click);
+            // 
+            // infinity_image
+            // 
+            this.infinity_image.BackColor = System.Drawing.Color.Transparent;
+            this.infinity_image.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("infinity_image.BackgroundImage")));
+            this.infinity_image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.infinity_image.Location = new System.Drawing.Point(1049, 608);
+            this.infinity_image.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.infinity_image.Name = "infinity_image";
+            this.infinity_image.Size = new System.Drawing.Size(120, 113);
+            this.infinity_image.TabIndex = 20;
+            this.infinity_image.TabStop = false;
+            this.infinity_image.Visible = false;
             // 
             // NoGravEx_V2
             // 
@@ -430,6 +445,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1181, 730);
+            this.Controls.Add(this.infinity_image);
             this.Controls.Add(this.choice_btn4);
             this.Controls.Add(this.choice_btn3);
             this.Controls.Add(this.choice_btn2);
@@ -459,6 +475,7 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infinity_image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,6 +519,7 @@
         private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limited9GoalsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infiniteLoopToolStripMenuItem;
+        private System.Windows.Forms.PictureBox infinity_image;
     }
 }
 
