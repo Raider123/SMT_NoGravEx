@@ -47,6 +47,9 @@
             this.noFeedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.game_settings_visual_only = new System.Windows.Forms.ToolStripMenuItem();
             this.game_settings_audio_only = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limited9GoalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infiniteLoopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsEMGToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openWaveplusFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chooseSensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,7 +170,8 @@
             this.gameSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.restartToolStripMenuItem,
             this.soundToolStripMenuItem,
-            this.noFeedbackToolStripMenuItem});
+            this.noFeedbackToolStripMenuItem,
+            this.modeToolStripMenuItem});
             this.gameSettingsToolStripMenuItem.Name = "gameSettingsToolStripMenuItem";
             this.gameSettingsToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.gameSettingsToolStripMenuItem.Text = "Game Settings";
@@ -175,7 +179,7 @@
             // restartToolStripMenuItem
             // 
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
@@ -184,7 +188,7 @@
             this.soundToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.onOffToolStripMenuItem});
             this.soundToolStripMenuItem.Name = "soundToolStripMenuItem";
-            this.soundToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.soundToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
             this.soundToolStripMenuItem.Text = "Sound";
             // 
             // onOffToolStripMenuItem
@@ -200,7 +204,7 @@
             this.game_settings_visual_only,
             this.game_settings_audio_only});
             this.noFeedbackToolStripMenuItem.Name = "noFeedbackToolStripMenuItem";
-            this.noFeedbackToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.noFeedbackToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
             this.noFeedbackToolStripMenuItem.Text = "No Feedback";
             // 
             // game_settings_visual_only
@@ -216,6 +220,29 @@
             this.game_settings_audio_only.Size = new System.Drawing.Size(164, 26);
             this.game_settings_audio_only.Text = "Audio only";
             this.game_settings_audio_only.Click += new System.EventHandler(this.audio_feedback_only);
+            // 
+            // modeToolStripMenuItem
+            // 
+            this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limited9GoalsToolStripMenuItem,
+            this.infiniteLoopToolStripMenuItem});
+            this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
+            this.modeToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
+            this.modeToolStripMenuItem.Text = "Mode (Restarts game!)";
+            // 
+            // limited9GoalsToolStripMenuItem
+            // 
+            this.limited9GoalsToolStripMenuItem.Name = "limited9GoalsToolStripMenuItem";
+            this.limited9GoalsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.limited9GoalsToolStripMenuItem.Text = "Limited (9 goals)";
+            this.limited9GoalsToolStripMenuItem.Click += new System.EventHandler(this.limited_loop);
+            // 
+            // infiniteLoopToolStripMenuItem
+            // 
+            this.infiniteLoopToolStripMenuItem.Name = "infiniteLoopToolStripMenuItem";
+            this.infiniteLoopToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.infiniteLoopToolStripMenuItem.Text = "Infinite Loop";
+            this.infiniteLoopToolStripMenuItem.Click += new System.EventHandler(this.infinite_loop);
             // 
             // settingsEMGToolStripMenuItem1
             // 
@@ -472,6 +499,9 @@
         private System.Windows.Forms.Button choice_btn2;
         private System.Windows.Forms.Button choice_btn3;
         private System.Windows.Forms.Button choice_btn4;
+        private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limited9GoalsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infiniteLoopToolStripMenuItem;
     }
 }
 

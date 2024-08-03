@@ -59,6 +59,9 @@ namespace NoGravEx_Entwurf2
         // For storing the data files in a sample (.emg_txt file)
         public StringBuilder emg_txt;
 
+        //In order to deactivate one label in the infinite_mode
+        public bool infinite_mode = false;
+
 
         /// <summary>
         /// We implement two states for now:
@@ -92,6 +95,8 @@ namespace NoGravEx_Entwurf2
             this.Height = 800;
             this.Width = 1000;
 
+            this.WindowState = FormWindowState.Maximized;
+
             /**
              *     Functions related to the game state
              */
@@ -108,6 +113,12 @@ namespace NoGravEx_Entwurf2
 
             // For implementing the curr_goal, that needs to be achieved
             this.create_game_queue(goal_arr_length);
+
+
+            foreach (int number in goal_arr)
+            {
+                Console.WriteLine(number);
+            }
 
             // Set the position of the cursor once in the beginning
             this.Set_cursor_pos();
@@ -173,12 +184,17 @@ namespace NoGravEx_Entwurf2
 
         private void Form_Resize(object sender, EventArgs e)
         {
+            this.Invalidate(); // Fordert eine Neuzeichnung an
+
             //Change the bar positions
             this.upper_point_x = this.Width / 2;
             this.upper_point_y = this.Height / 4;
 
             //Change all elements
             UpdateLayout();
+
+            label1.Location = new Point(label1.Location.X - 20, 100);
+            panel1.Location = new Point(panel1.Location.X - 5, panel1.Location.Y);
         }
 
         private void UpdateLayout()
@@ -211,8 +227,6 @@ namespace NoGravEx_Entwurf2
                 control.Location = new Point(control.Left + offsetX, control.Top + offsetY);
             }
         }
-
-
 
         /// <summary>
         /// Change the selected sensor by simply pressing a number key. There are 10 sensor in total.
@@ -309,8 +323,11 @@ namespace NoGravEx_Entwurf2
                 panel1.Visible = true;
                 pictureBox1.Visible = true;
                 label1.Visible = true;
-                label3.Visible = true;
-
+                if (infinite_mode == false)
+                {
+                    label3.Visible = true;
+                }
+                
                 meas_button.Visible = false;
                 meas_button.Enabled = false;
                 meas_label.Visible = false;
@@ -421,7 +438,10 @@ namespace NoGravEx_Entwurf2
                 panel1.Visible = false; // white bar is only visible in the correct zones (at the start not visible)
                 pictureBox1.Visible = true;
                 label1.Visible = true;
-                label3.Visible = true;
+                if (infinite_mode == false)
+                {
+                    label3.Visible = true;
+                }
 
                 meas_button.Visible = false;
                 meas_button.Enabled = false;
@@ -1235,6 +1255,78 @@ namespace NoGravEx_Entwurf2
                 this.change_program_state();
             }
         }
+
+        private void limited_loop(object sender, EventArgs e)
+        {
+            goal_arr_length = 9;
+            infinite_mode = false;
+
+            // Creating a new game queue for a new session (new queue, num_of_success, new goal)
+            this.create_game_queue(goal_arr_length);
+            this.num_of_success = 0;
+            this.Refresh_goal();
+
+            // Reset the moving average
+            this.simple_ma = new MovingAverage(k: 100); // very variant at 80; very ideal at 180
+
+            // Creates a new .txt document for storing the measured values
+            this.set_file_path();
+
+            emg_txt = new StringBuilder();
+            var newLine = string.Format("[uV]");
+            emg_txt.AppendLine(newLine);
+
+            // Reset the cursor position 
+            this.Set_cursor_pos();
+
+            // Reset the time passed
+            this.passed_time = 0;
+
+            // Restarts the Measuring Process at the Waveplus Device
+            wdaq.StopCaptureButton_Click(sender, e);
+            wdaq.StartCaptureButton_Click(sender, e);
+
+            // Restart the game timer
+            num_g_ticks = game_duration_sec * 1000 / 10;
+            game_timer.Start();
+        }
+
+        private void infinite_loop(object sender, EventArgs e)
+        {
+            goal_arr_length = 90000;
+            infinite_mode = true;
+            label3.Visible = false;
+
+            // Creating a new game queue for a new session (new queue, num_of_success, new goal)
+            this.create_game_queue(goal_arr_length);
+            this.num_of_success = 0;
+            this.Refresh_goal();
+
+            // Reset the moving average
+            this.simple_ma = new MovingAverage(k: 100); // very variant at 80; very ideal at 180
+
+            // Creates a new .txt document for storing the measured values
+            this.set_file_path();
+
+            emg_txt = new StringBuilder();
+            var newLine = string.Format("[uV]");
+            emg_txt.AppendLine(newLine);
+
+            // Reset the cursor position 
+            this.Set_cursor_pos();
+
+            // Reset the time passed
+            this.passed_time = 0;
+
+            // Restarts the Measuring Process at the Waveplus Device
+            wdaq.StopCaptureButton_Click(sender, e);
+            wdaq.StartCaptureButton_Click(sender, e);
+
+            // Restart the game timer
+            num_g_ticks = game_duration_sec * 1000 / 10;
+            game_timer.Start();
+        }
+
 
         private void choice_btn1_Click(object sender, EventArgs e)
         {

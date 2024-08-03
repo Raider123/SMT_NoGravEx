@@ -372,7 +372,7 @@ namespace Waveplus.DaqExample
         }
 
         // Method by Raid Dokhan
-        public double current_emg_sample; 
+        public double current_emg_sample = 2f;
         public int current_sensor;
         public void store_emg_samples(DataAvailableEventArgs e)
         {
