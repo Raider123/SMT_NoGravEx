@@ -196,7 +196,7 @@ namespace NoGravEx_Entwurf2
             UpdateLayout();
 
             label1.Location = new Point(label1.Location.X - 20, 100);
-            panel1.Location = new Point(panel1.Location.X - 5, panel1.Location.Y);
+            panel1.Location = new Point(panel1.Location.X + 5, panel1.Location.Y);
         }
 
         private void UpdateLayout()
