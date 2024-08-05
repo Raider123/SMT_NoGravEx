@@ -374,12 +374,21 @@ namespace Waveplus.DaqExample
         // Method by Raid Dokhan
         public double current_emg_sample = 2f; 
         public int current_sensor;
+
+        // Store the values of all emg_channels
+        public double[] rec_emg_samples = new double[DeviceConstant.MAX_SENSORS_NUM];
         public void store_emg_samples(DataAvailableEventArgs e)
         {
             // The samples are expressed in [uV] unit
             // Expected value for the mvc of a person - around 1200uV
             this.current_emg_sample = e.Samples[current_sensor - 1, e.ScanNumber - 1];
             test_csv.AppendLine((e.Samples[current_sensor - 1, e.ScanNumber - 1]).ToString());
+
+            //Experimental (multiple Sensors)
+            for (var c = 0; c < DeviceConstant.MAX_SENSORS_NUM; c++)
+            {
+                rec_emg_samples[c] = e.Samples[c, e.ScanNumber - 1];
+            }
         }
 
         public void SensorMemory_DataAvailable(object sender, SensorMemoryDataAvailableEventArgs e)

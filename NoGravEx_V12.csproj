@@ -89,14 +89,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LSL.cs" />
-    <Compile Include="Sender.cs" />
+    <Compile Include="Sender.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WaveplusDaqExampleForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WaveplusDaqExampleForm.Designer.cs">
       <DependentUpon>WaveplusDaqExampleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="WaveplusDaqExampleForm.resx">
       <DependentUpon>WaveplusDaqExampleForm.cs</DependentUpon>
