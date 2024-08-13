@@ -122,3 +122,16 @@ C:\Users\dokha\Documents\GitHub\TestClone\SMT_NoGravEx\obj\Debug\Waveplus_Daq_Ex
 C:\Users\dokha\Documents\SMT_NoGravEx\bin\Debug\lsl.dll
 C:\Users\dokha\Documents\SMT_NoGravEx\obj\Debug\NoGravEx.944E3642.Up2Date
 C:\Users\dokha\Documents\SMT_NoGravEx\bin\Debug\CyUSB.dll
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\bin\Debug\lsl.dll
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\bin\Debug\Waveplus_Daq_Example.exe.config
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\bin\Debug\Waveplus_Daq_Example.exe
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\bin\Debug\Waveplus_Daq_Example.pdb
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\NoGravEx_V12.csproj.AssemblyReference.cache
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\Waveplus.DaqExample.WaveplusDaqExampleForm.resources
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\Waveplus_Daq_Example.Properties.Resources.resources
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\Waveplus.DaqExample.CaptureAndSensorConfigForm.resources
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\NoGravEx_V12.csproj.GenerateResource.cache
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\NoGravEx_V12.csproj.CoreCompileInputs.cache
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\NoGravEx_V12.csproj.CopyComplete
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\Waveplus_Daq_Example.exe
+C:\Users\setup\Downloads\SMT_NoGravEx-niklas_emg_streaming\SMT_NoGravEx-niklas_emg_streaming\obj\Debug\Waveplus_Daq_Example.pdb

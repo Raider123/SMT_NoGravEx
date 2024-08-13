@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -25,10 +26,6 @@ namespace Waveplus.DaqExample
 
         readonly Label [] _sensorNumberLabels;
         readonly ProgressBar[] _sensorBatteryLevelBars;
-
-        // Storing the emg samples without a delay
-        public string filePath = Path.Combine(Environment.CurrentDirectory, @"emg_sample_files\", "Waveplus_DATA.txt");
-        public StringBuilder test_csv;
 
         public WaveplusDaqExampleForm()
         {
@@ -97,8 +94,7 @@ namespace Waveplus.DaqExample
                 DisplayErrorOccurred(_daqSystem.InitialError);
             }
 
-            // Constructor for the String Builder
-            test_csv = new StringBuilder();
+
         }
 
         private void DaqToolForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -371,21 +367,16 @@ namespace Waveplus.DaqExample
             store_emg_samples(e);
         }
 
-        // Method by Raid Dokhan
-        public double current_emg_sample = 2f; 
-        public int current_sensor;
+ 
 
         // Store the values of all emg_channels
         public double[] rec_emg_samples = new double[DeviceConstant.MAX_SENSORS_NUM];
         public void store_emg_samples(DataAvailableEventArgs e)
         {
             // The samples are expressed in [uV] unit
-            // Expected value for the mvc of a person - around 1200uV
-            this.current_emg_sample = e.Samples[current_sensor - 1, e.ScanNumber - 1];
-            test_csv.AppendLine((e.Samples[current_sensor - 1, e.ScanNumber - 1]).ToString());
 
             //Experimental (multiple Sensors)
-            for (var c = 0; c < DeviceConstant.MAX_SENSORS_NUM; c++)
+            for (var c = 0; c < 16; c++)
             {
                 rec_emg_samples[c] = e.Samples[c, e.ScanNumber - 1];
             }
@@ -608,9 +599,6 @@ namespace Waveplus.DaqExample
             {
                 // Stop data capture process
                 _daqSystem.StopCapturing();
-
-                // Finalize the document with the emg values (put the string stream into the .txt file)
-                File.WriteAllText(filePath, test_csv.ToString());
             }
             catch (Exception _exception)
             {
